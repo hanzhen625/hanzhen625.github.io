@@ -1,22 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hanzhen Yu | GIS Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hanzhen Yu - GIS, geography, cartography, remote sensing, and spatial data portfolio.">
+  <title>Hanzhen Yu | GIS & Spatial Data</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Main navigation">
+      <a class="brand" href="index.html">Hanzhen Yu</a>
+      <div class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#maps">Maps</a>
+        <a href="#about">About</a>
+        <a class="nav-cta" href="https://github.com/hanzhen625" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </div>
+    </nav>
+  </header>
 
-    <h1>Hanzhen Yu</h1>
+  <main>
+    <section class="hero wrap">
+      <div>
+        <p class="kicker">GIS · Geography · Spatial Data Science</p>
+        <h1>Mapping landscapes, change, and environmental questions.</h1>
+        <p class="lead">A portfolio of spatial analysis, remote sensing, cartography, web GIS, and research projects.</p>
+      </div>
+      <aside class="hero-aside">
+        <strong>Selected work</strong>
+        <p>Environmental GIS, historical mapping, terrain analysis, Google Earth Engine, 2D cartography, and 3D scenes.</p>
+      </aside>
+    </section>
 
-    <p>Geography · GIS · Data Science</p>
+    <section class="section wrap" id="work">
+      <div class="section-head">
+        <h2>Selected work</h2>
+        <p>Projects are organized by the problem and method rather than by software. Use the filters to browse different kinds of GIS work.</p>
+      </div>
 
-    <h2>Selected Projects</h2>
+      <div class="filters" aria-label="Project filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="analysis">Spatial analysis</button>
+        <button class="filter-btn" data-filter="remote">Remote sensing</button>
+        <button class="filter-btn" data-filter="web">Web GIS</button>
+        <button class="filter-btn" data-filter="cartography">Cartography</button>
+        <button class="filter-btn" data-filter="research">Research</button>
+      </div>
 
-    <p>GIS portfolio coming soon.</p>
+      <div class="project-grid">
+        <article class="card featured" data-category="research analysis cartography">
+          <div class="card-media"><img src="assets/rock-glacier-scenes.jpg" alt="3D terrain scenes showing rock glacier drainage basin delineation"></div>
+          <div class="card-body">
+            <div class="card-label"><span class="pill">Research</span><span class="pill">Terrain analysis</span><span class="pill">3D GIS</span></div>
+            <h3>Automatic Drainage Basin Delineation in High-Mountain Environments</h3>
+            <p>Testing an automated catchment-delineation workflow with 178 rock glaciers in Colorado's Taylor Park Alpine Basin, including DEM-resolution and rooting-zone buffer comparisons.</p>
+            <a class="card-link" href="projects/rock-glaciers.html">View project →</a>
+          </div>
+        </article>
 
+        <article class="card" data-category="remote web analysis">
+          <div class="card-media"><img src="assets/aconcagua-gee.jpg" alt="Google Earth Engine interface comparing glacier cover near Aconcagua"></div>
+          <div class="card-body">
+            <div class="card-label"><span class="pill">Google Earth Engine</span><span class="pill">Remote sensing</span></div>
+            <h3>Glacier Cover Change near Aconcagua, 1986-2024</h3>
+            <p>Using Landsat, NDSI, and elevation data to explore long-term snow and glacier cover change, snowline elevation, and former glacier terminus points.</p>
+            <a class="card-link" href="projects/aconcagua.html">View project →</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="analysis cartography research">
+          <div class="card-media"><img src="assets/gowen-cypress.jpg" alt="Map of Gowen cypress native habitat proximity to roads and trails"></div>
+          <div class="card-body">
+            <div class="card-label"><span class="pill">Environmental GIS</span><span class="pill">Cartography</span></div>
+            <h3>Gowen Cypress Habitat & Transportation Networks</h3>
+            <p>Combining species observations and a georeferenced historical distribution map to examine how close rare native habitat is to paved roads, trails, and unpaved roads.</p>
+            <a class="card-link" href="projects/gowen-cypress.html">View project →</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="web analysis cartography">
+          <div class="card-media"><div class="placeholder-map"><span>Replace with one of your final StoryMap maps</span></div></div>
+          <div class="card-body">
+            <div class="card-label"><span class="pill">Web GIS</span><span class="pill">Spatial storytelling</span></div>
+            <h3>Where Californian Farmworkers Face the Most Health Risks</h3>
+            <p>An ArcGIS StoryMap examining spatial patterns of health risk in California farming communities. This portfolio page is designed to foreground the two final maps from the story.</p>
+            <a class="card-link" href="projects/farmworker-health.html">View project →</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="research cartography analysis">
+          <div class="card-media"><div class="placeholder-map"><span>Add your current ArcGIS Pro creek layout here</span></div></div>
+          <div class="card-body">
+            <div class="card-label"><span class="pill wip">Work in progress</span><span class="pill">Historical GIS</span></div>
+            <h3>Tracing Historical Creeks in the Bay Area</h3>
+            <p>A developing historical-GIS project using georeferenced archival maps and modern spatial data. The project page is set up as a process notebook so unfinished research can still be shown clearly.</p>
+            <a class="card-link" href="projects/historical-creeks.html">View process →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section wrap" id="maps">
+      <div class="section-head">
+        <h2>Map gallery</h2>
+        <p>Use this section for individual 2D layouts and local scenes that are visually strong but do not need a full case-study page.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="assets/gowen-cypress.jpg" alt="Gowen cypress map layout"><div class="gallery-caption">Gowen Cypress · 2D layout</div></div>
+        <div class="gallery-item"><img src="assets/rock-glacier-scenes.jpg" alt="Rock glacier 3D scenes"><div class="gallery-caption">Rock Glaciers · local scenes</div></div>
+        <div class="gallery-item gallery-placeholder">Add another 2D map layout<br><small>Replace this card with an image later</small></div>
+        <div class="gallery-item gallery-placeholder">Add a local scene<br><small>Terrain / 3D visualization</small></div>
+        <div class="gallery-item gallery-placeholder">Add a cartographic layout<br><small>Environmental or thematic map</small></div>
+        <div class="gallery-item gallery-placeholder">Add another favorite map<br><small>This gallery can grow independently of projects</small></div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="about">
+      <div class="about-grid">
+        <h2>About</h2>
+        <div>
+          <p>I am interested in using GIS, geography, remote sensing, and spatial data to understand environmental change and communicate place-based questions. This site collects both finished work and selected projects in progress.</p>
+          <p><strong>Edit this paragraph later</strong> with your school/program, research interests, career direction, and the kinds of GIS work you want to do.</p>
+          <div class="about-links">
+            <a class="text-link" href="https://github.com/hanzhen625" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <a class="text-link" href="#">Resume (add PDF)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <span>© <span id="year"></span> Hanzhen Yu</span>
+    <span>Built as a static site for hanzhen-yu.com</span>
+  </footer>
+  <script src="script.js"></script>
 </body>
-
 </html>
