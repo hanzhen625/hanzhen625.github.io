@@ -337,3 +337,85 @@ button { font: inherit; }
   .card-body, .card.featured .card-body { padding: 24px; }
   .footer { flex-direction: column; }
 }
+
+/* Contact popup */
+
+.contact-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+  background: rgba(17, 25, 20, 0.45);
+  backdrop-filter: blur(6px);
+}
+
+.contact-modal.open {
+  display: flex;
+}
+
+.contact-modal-box {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+
+  padding: 36px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+
+  background: var(--surface);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.18);
+}
+
+.contact-modal-box h2 {
+  margin: 0 0 28px;
+  font-size: 2rem;
+  letter-spacing: -0.04em;
+}
+
+.contact-close {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+
+  border: 0;
+  background: none;
+  color: var(--muted);
+
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.contact-options {
+  display: grid;
+  gap: 12px;
+}
+
+.contact-options a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+
+  text-decoration: none;
+  font-weight: 750;
+}
+
+.contact-options a:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.contact-options span {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
