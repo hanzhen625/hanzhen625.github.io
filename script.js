@@ -15,3 +15,27 @@ buttons.forEach((button) => {
 });
 
 document.getElementById('year').textContent = new Date().getFullYear();
+
+const contactBtn = document.getElementById("contactBtn");
+const contactModal = document.getElementById("contactModal");
+const contactClose = document.getElementById("contactClose");
+
+contactBtn.addEventListener("click", () => {
+  contactModal.classList.add("open");
+});
+
+contactClose.addEventListener("click", () => {
+  contactModal.classList.remove("open");
+});
+
+contactModal.addEventListener("click", (event) => {
+  if (event.target === contactModal) {
+    contactModal.classList.remove("open");
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    contactModal.classList.remove("open");
+  }
+});
