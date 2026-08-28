@@ -1,6 +1,7 @@
 :root {
   --bg: #f5f3ed;
   --paper: #fffef9;
+  --surface: var(--paper);
   --ink: #172019;
   --muted: #667067;
   --line: #d8ddd6;
@@ -69,7 +70,7 @@ button { font: inherit; }
   padding: 108px 0 84px;
   display: grid;
   grid-template-columns: 1.5fr .75fr;
-  align-items: end;
+  align-items: center;
   gap: 80px;
 }
 .kicker {
@@ -94,12 +95,29 @@ button { font: inherit; }
   color: var(--muted);
 }
 .hero-aside {
-  padding-left: 30px;
-  border-left: 1px solid var(--line);
+  padding-left: 18px;
   color: var(--muted);
 }
 .hero-aside strong { display: block; color: var(--ink); margin-bottom: 8px; }
 .hero-aside p { margin: 0; }
+
+/* Small cropped image placed next to the main title */
+.hero-image-small {
+  width: 320px;
+  max-height: 360px;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  align-self: center;
+  border: 0;
+  background: var(--paper);
+}
+.hero-image-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
 .section { padding: 76px 0; }
 .section-head {
@@ -150,6 +168,12 @@ button { font: inherit; }
   background: #e3e8e1;
   overflow: hidden;
   aspect-ratio: 16 / 10;
+}
+
+.card-media.card-media-preview {
+  aspect-ratio: auto;
+  height: auto;
+  background: transparent;
 }
 .card.featured .card-media { aspect-ratio: auto; min-height: 420px; }
 .card-media img { width: 100%; height: 100%; object-fit: cover; }
@@ -206,6 +230,78 @@ button { font: inherit; }
   font-size: .8rem;
   font-weight: 800;
   color: var(--green-dark);
+}
+
+.pdf-thumb {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 180px;
+  text-decoration: none;
+  color: var(--ink);
+  background: linear-gradient(180deg, #f7f9f7, #e9efe9);
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  font-weight: 800;
+}
+
+.project-bullets { margin: 12px 0 0 18px; color: var(--muted); }
+.project-bullets li { margin-bottom: 6px; }
+
+/* Vertical crop for map preview and rotated PDF button */
+.crop-vertical {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  overflow: visible; /* allow vertical button to extend outside without clipping */
+  border-radius: 12px;
+}
+.crop-vertical img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: none;
+}
+.crop-vertical::before,
+.crop-vertical::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 18%;
+  pointer-events: none;
+  z-index: 2;
+}
+.crop-vertical::before {
+  top: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.28), rgba(0,0,0,0));
+}
+.crop-vertical::after {
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,0.28), rgba(0,0,0,0));
+}
+.pdf-vertical-button {
+  position: absolute;
+  right: 12px; /* place inside the visible area */
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg); /* center vertically then rotate */
+  transform-origin: center;
+  background: var(--green-dark);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 800;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  z-index: 3;
+}
+.pdf-vertical-button:hover { opacity: .92; }
+
+@media (max-width: 900px) {
+  .crop-vertical { height: 300px; }
+  .pdf-vertical-button { right: -18px; padding: 8px 12px; }
 }
 
 .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
@@ -325,6 +421,7 @@ button { font: inherit; }
   .card.featured .card-media { min-height: 310px; }
   .gallery-grid { grid-template-columns: 1fr 1fr; }
   .project-sidebar { position: static; }
+  .hero-image-small { display: none; }
 }
 
 @media (max-width: 650px) {

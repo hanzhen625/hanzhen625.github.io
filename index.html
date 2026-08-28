@@ -15,7 +15,7 @@
         <a href="#work">Work</a>
         <a href="#maps">Maps</a>
         <a href="#about">About</a>
-        <button class="nav-cta" id="contactBtn">Contact Me</button>
+        <button type="button" class="nav-cta open-contact" id="contactBtn">Contact Me</button>
       </div>
     </nav>
   </header>
@@ -28,6 +28,9 @@
         <p class="lead">A portfolio of spatial analysis, remote sensing, cartography, web maps, and research projects.</p>
       </div>
       <aside class="hero-aside">
+        <div class="hero-image-small">
+          <img src="assets/better_lake.jpg" alt="Lake scene">
+        </div>
         <strong>Selected work</strong>
         <p>Environmental GIS, historical mapping, terrain analysis, remote sensing, 2D and 3D cartography</p>
       </aside>
@@ -41,7 +44,6 @@
 
       <div class="filters" aria-label="Project filters">
         <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="analysis">Spatial analysis</button>
         <button class="filter-btn" data-filter="remote">Remote sensing</button>
         <button class="filter-btn" data-filter="web">Web GIS</button>
         <button class="filter-btn" data-filter="cartography">Cartography</button>
@@ -52,30 +54,45 @@
         <article class="card featured" data-category="research analysis cartography">
           <div class="card-media"><img src="assets/rock-glacier-scenes.jpg" alt="3D terrain scenes showing rock glacier drainage basin delineation"></div>
           <div class="card-body">
-            <div class="card-label"><span class="pill">Research</span><span class="pill">Terrain analysis</span><span class="pill">3D GIS</span></div>
-            <h3>Automatic Drainage Basin Delineation in High-Mountain Environments</h3>
-            <p>Testing an automated catchment-delineation workflow with 178 rock glaciers in Colorado's Taylor Park Alpine Basin, including DEM-resolution and rooting-zone buffer comparisons.</p>
+            <div class="card-label"><span class="pill wip">Work in progress</span><span class="pill">Research</span><span class="pill">Terrain analysis</span><span class="pill">3D GIS</span></div>
+            <h3>Automatic Mapping of Drainage Basins for Rock Glaciers</h3>
+            <p>Some ArcGIS 3D scenes from my poster.</p>
             <a class="card-link" href="projects/rock-glaciers.html">View project →</a>
           </div>
         </article>
 
         <article class="card" data-category="remote web analysis">
-          <div class="card-media"><img src="assets/aconcagua-gee.jpg" alt="Google Earth Engine interface comparing glacier cover near Aconcagua"></div>
+          <div class="card-media card-media-preview"><img src="assets/gee_project_cover.png" alt="GEE project cover for Aconcagua glacier"></div>
           <div class="card-body">
             <div class="card-label"><span class="pill">Google Earth Engine</span><span class="pill">Remote sensing</span></div>
             <h3>Glacier Cover Change near Aconcagua, 1986-2024</h3>
             <p>Using Landsat, NDSI, and elevation data to explore long-term snow and glacier cover change, snowline elevation, and former glacier terminus points.</p>
-            <a class="card-link" href="projects/aconcagua.html">View project →</a>
+            <div class="gee-links">
+              <p class="small">Web apps:</p>
+              <ul class="small-list">
+                <li><a href="https://yugeog185.projects.earthengine.app/view/geog-185-final-project---hanzhen-yu" target="_blank" rel="noreferrer">Final project (main app)</a></li>
+                <li><a href="https://yugeog185.projects.earthengine.app/view/geog-185-project-additional-point-analysis-script---hanzhen-yu" target="_blank" rel="noreferrer">Additional point-analysis script</a></li>
+              </ul>
+            </div>
           </div>
         </article>
 
-        <article class="card" data-category="analysis cartography research">
-          <div class="card-media"><img src="assets/gowen-cypress.jpg" alt="Map of Gowen cypress native habitat proximity to roads and trails"></div>
+        <article class="card" data-category="analysis cartography">
+          <div class="card-media card-media-preview">
+            <div class="crop-vertical">
+              <img src="assets/gowen_cypress.png" alt="Proximity of Gowen Cypress Native Habitat to Human Disturbance">
+              <a class="pdf-vertical-button" href="assets/gowen_cypress.pdf" target="_blank">Click for full PDF</a>
+            </div>
+          </div>
           <div class="card-body">
             <div class="card-label"><span class="pill">Environmental GIS</span><span class="pill">Cartography</span></div>
-            <h3>Gowen Cypress Habitat & Transportation Networks</h3>
-            <p>Combining species observations and a georeferenced historical distribution map to examine how close rare native habitat is to paved roads, trails, and unpaved roads.</p>
-            <a class="card-link" href="projects/gowen-cypress.html">View project →</a>
+              <h3>Proximity of Gowen Cypress Native Habitat to Human Disturbance</h3>
+            <ul class="project-bullets">
+              <li>Gowen Cypress is an endangered and endemic species threatened by soil erosion from human roads and trails.</li>
+              <li>Combined datasets from iNaturalist and a published paper together using georeferencing, spatial buffers, and concave hulls.</li>
+              <li>Generated proximity raster from the result.</li>
+            </ul>
+            <a class="card-link" href="assets/gowen_cypress.pdf" target="_blank">View project →</a>
           </div>
         </article>
 
@@ -92,7 +109,7 @@
         <article class="card" data-category="research cartography analysis">
           <div class="card-media"><div class="placeholder-map"><span>Add your current ArcGIS Pro creek layout here</span></div></div>
           <div class="card-body">
-            <div class="card-label"><span class="pill wip">Work in progress</span><span class="pill">Historical GIS</span></div>
+            <div class="card-label"><span class="pill wip">Work in progress</span><span class="pill">Historical GIS</span><span class="pill">Research</span></div>
             <h3>Tracing Historical Creeks in the Bay Area</h3>
             <p>A developing historical-GIS project using georeferenced archival maps and modern spatial data. The project page is set up as a process notebook so unfinished research can still be shown clearly.</p>
             <a class="card-link" href="projects/historical-creeks.html">View process →</a>
@@ -101,20 +118,7 @@
       </div>
     </section>
 
-    <section class="section wrap" id="maps">
-      <div class="section-head">
-        <h2>Map gallery</h2>
-        <p>Use this section for individual 2D layouts and local scenes that are visually strong but do not need a full case-study page.</p>
-      </div>
-      <div class="gallery-grid">
-        <div class="gallery-item"><img src="assets/gowen-cypress.jpg" alt="Gowen cypress map layout"><div class="gallery-caption">Gowen Cypress · 2D layout</div></div>
-        <div class="gallery-item"><img src="assets/rock-glacier-scenes.jpg" alt="Rock glacier 3D scenes"><div class="gallery-caption">Rock Glaciers · local scenes</div></div>
-        <div class="gallery-item gallery-placeholder">Add another 2D map layout<br><small>Replace this card with an image later</small></div>
-        <div class="gallery-item gallery-placeholder">Add a local scene<br><small>Terrain / 3D visualization</small></div>
-        <div class="gallery-item gallery-placeholder">Add a cartographic layout<br><small>Environmental or thematic map</small></div>
-        <div class="gallery-item gallery-placeholder">Add another favorite map<br><small>This gallery can grow independently of projects</small></div>
-      </div>
-    </section>
+    
 
     <section class="section wrap" id="about">
       <div class="about-grid">
@@ -123,7 +127,7 @@
           <p>I am interested in using GIS, geography, remote sensing, and spatial data to understand environmental change and communicate place-based questions. This site collects both finished work and selected projects in progress.</p>
           <p><strong>Edit this paragraph later</strong> with your school/program, research interests, career direction, and the kinds of GIS work you want to do.</p>
           <div class="about-links">
-            <a class="nav-cta" href="Email:hanzhen625@berkeley.edu">Contact Me</a>
+            <button type="button" class="nav-cta open-contact" id="contactBtnBottom">Contact Me</button>
             <a class="text-link" href="#">Resume (add PDF)</a>
           </div>
         </div>
@@ -133,28 +137,32 @@
 
   <footer class="footer wrap">
     <span>© <span id="year"></span> Hanzhen Yu</span>
-    <span>Built as a static site for hanzhen-yu.com</span>
+    
   </footer>
-  <script src="script.js"></script>
+  <div id="contactModal" class="contact-modal" aria-hidden="true" role="dialog" aria-labelledby="contactTitle">
+    <div class="contact-modal-box" role="document">
+      <button id="contactClose" class="contact-close" aria-label="Close">&times;</button>
       <p class="eyebrow">Get in touch</p>
-    <h2>Contact Me</h2>
+      <h2 id="contactTitle">Contact Me</h2>
 
-    <div class="contact-options">
-      <a href="mailto:hanzhen625@berkeley.edu">
-        Email
-        <span>hanzhen625@berkeley.edu</span>
-      </a>
+      <div class="contact-options">
+        <a href="mailto:hanzhen625@berkeley.edu">
+          Email
+          <span>hanzhen625@berkeley.edu</span>
+        </a>
 
-      <a
-        href="https://www.linkedin.com/in/hanzhen-yu/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        LinkedIn
-        <span>View profile ↗</span>
-      </a>
+        <a
+          href="https://www.linkedin.com/in/hanzhen-yu/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          LinkedIn
+          <span>View profile ↗</span>
+        </a>
+      </div>
     </div>
   </div>
-</div>
+
+  <script src="script.js"></script>
 </body>
 </html>
