@@ -44,7 +44,8 @@
       <div class="filters" aria-label="Project filters">
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="remote">Remote sensing</button>
-        <button class="filter-btn" data-filter="web">Web GIS</button>
+        <button class="filter-btn" data-filter="web">Webmap</button>
+        <button class="filter-btn" data-filter="spatial-analysis">Spatial Analysis</button>
         <button class="filter-btn" data-filter="cartography">Cartography</button>
         <button class="filter-btn" data-filter="research">Research</button>
       </div>
@@ -84,7 +85,7 @@
           </div>
         </article>
 
-        <article class="card" data-category="analysis cartography">
+        <article class="card" data-category="analysis cartography spatial-analysis">
           <div class="card-media card-media-preview">
             <div class="crop-vertical">
               <img src="assets/gowen_cypress.png" alt="Proximity of Gowen Cypress Native Habitat to Human Disturbance">
@@ -92,7 +93,7 @@
             </div>
           </div>
           <div class="card-body">
-            <div class="card-label"><span class="pill">Environmental GIS</span><span class="pill">Cartography</span></div>
+            <div class="card-label"><span class="pill">Environmental GIS</span><span class="pill">Cartography</span><span class="pill">Spatial Analysis</span></div>
               <h3>Proximity of Gowen Cypress Native Habitat to Human Disturbance</h3>
             <ul class="project-bullets">
               <li>Gowen Cypress is an endangered and endemic species threatened by soil erosion from human roads and trails.</li>
@@ -103,13 +104,13 @@
           </div>
         </article>
 
-        <article class="card" data-category="web analysis cartography">
+        <article class="card" data-category="web analysis cartography spatial-analysis">
           <div class="card-media map-cover">
             <iframe src="https://cal.maps.arcgis.com/apps/mapviewer/index.html?webmap=e418926ec7a44b1b90511182c257c78b" title="Driving distances map across California" loading="lazy"></iframe>
             <a class="map-cover-label" href="https://cal.maps.arcgis.com/apps/mapviewer/index.html?webmap=e418926ec7a44b1b90511182c257c78b" target="_blank" rel="noreferrer">Open driving distances map <span aria-hidden="true">↗</span></a>
           </div>
           <div class="card-body">
-            <div class="card-label"><span class="pill">Web GIS</span><span class="pill">Spatial storytelling</span></div>
+            <div class="card-label"><span class="pill">Webmap</span><span class="pill">Spatial storytelling</span><span class="pill">Spatial Analysis</span></div>
             <h3>Where Californian Farmworkers Face the Most Health Risks</h3>
             <p>An ArcGIS StoryMap examining spatial patterns of health risk in California farming communities.</p>
             <div class="map-links" aria-label="Farmworker health maps">
@@ -130,6 +131,31 @@
             <p>Historical-GIS project under the mentorship of Professor Clancy Wilmott and in collaboration with The Sogorea Te Land Trust.</p>
             <ul class="project-bullets">
               <li>Merged georeferenced historical maps, current databases, and topographic flow lines to reconstruct creeks in the Bay Area before European settlement.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card" data-category="cartography analysis spatial-analysis">
+          <div class="card-media image-pair-media" aria-label="Project map and workflow diagram">
+            <figure class="project-image-preview">
+              <a href="assets/Berkeley_Fire_suitability.png" target="_blank" rel="noreferrer" aria-label="View full-size fire station suitability map">
+                <img src="assets/Berkeley_Fire_suitability.png" alt="Fire station site suitability map for Berkeley">
+                <span>View full map <span aria-hidden="true">↗</span></span>
+              </a>
+            </figure>
+            <figure class="project-image-preview">
+              <a href="assets/Berkeley_new_fire_station_suitability)flowchart.png" target="_blank" rel="noreferrer" aria-label="View full-size suitability analysis flowchart">
+                <img src="assets/Berkeley_new_fire_station_suitability)flowchart.png" alt="Flowchart of the Berkeley fire station suitability analysis">
+                <span>View full flowchart <span aria-hidden="true">↗</span></span>
+              </a>
+            </figure>
+          </div>
+          <div class="card-body">
+            <div class="card-label"><span class="pill">Cartography</span><span class="pill">Suitability Modeling</span><span class="pill">Spatial Analysis</span></div>
+            <h3>Suitability Map for New Fire Station in Berkeley</h3>
+            <ul class="project-bullets">
+              <li>Developed a site-suitability model in ArcGIS Pro to identify candidate locations for a new fire station based on population, road accessibility, wildfire hazard, environmental constraints, and proximity to existing stations.</li>
+              <li>Integrated spatial datasets from CAL FIRE, OpenStreetMap, local records, terrain data, and existing facilities using projections, attribute queries, buffers, proximity analysis, reclassification, and vector overlay operations.</li>
             </ul>
           </div>
         </article>
